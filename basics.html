@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!--we can also run scripts from other location using the source element!-->
+    <script type="module" src="script1.js"></script>
+</head>
+<body>
+
+    <script>
+        function add7(number) {
+            return (number + 7)
+        }
+
+        function multiply(a,b) {
+            return (a * b)
+        }
+
+        function capitalize(word) {
+            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+            
+        }
+    
+        function lastL(text) {
+            return text.slice(-1)
+        }
+
+
+
+    </script>
+
+
+    <script>
+        //your javascript goes here and appears in the console!
+        console.log("hello, world!")        
+    </script>
+
+
+
+
+
+    <script>
+        //can assign values... by using "let" and then summon them into the "log" of the browser dev view. 
+        //NOTE: 'var' is also an older method of setting variable, like 'let', but 'let' is more restricted so can only be edited inside the "block" so it is safer than the older va
+
+        let firstName = "john";
+        let lastName= "doe";
+
+        console.log(firstName)
+        console.log(lastName)
+
+        // we can also re-assign "let" values, after setting it, we can specify the property and value again, to update it.
+
+        let age = 11;
+        console.log(age);
+
+        age=54;
+        console.log(age)
+    </script>
+
+
+    <!--- separating the scripts because the example error broke the whole script! LOL-->
+
+    <script>
+        // we can also set constant values using "const", unlike a let, this cannot be updated and will throw an error. see this working version, and the next NON working version
+        const pi = 3.14;
+        console.log(pi);
+
+    </script>
+
+
+<script>// non working version of a const , when you try to change something.
+//         const pi = 3.14;
+//         pi = 10;
+//         console.log(pi);
+    </script>  
+
+
+<!--numbers are a thing too! BODMAS is the method used for identifying the order of progression on long equations.-->
+
+    <script>
+        console.log(23 + 97)
+        console.log(5+17+99+77+24)
+        console.log((4+6+9)/77)
+        console.log((3+2)-76*(1+1))
+    </script>
+
+<!--variables!!!-->
+    <script>
+        // set a constant
+        let a = 10
+        console.log(a)
+
+        // change that constant but notice how the log still shows the old one as well as the new one!, so you can do the same calculation multiple times, and change just 1 variable / value.
+        a = 20
+        console.log(a)
+
+        // Now mix the variables up! basing the value of b on maths using a! proper algebra here!
+
+        let b = 7 * a
+        console.log(b)
+
+    </script>
+
+    <script>
+        // and an example of how you can stack them, using terms that could be recognized, such as a percentage remaining of X equation (such as stock or HP!!)
+        const max = 57
+        const actual = max-13
+        const percentage = actual/max
+        console.log(percentage)
+
+    </script>
+
+    <script>
+        let damage = 10
+        damage = 20
+
+        const maxhealth = 100
+        const actualHP = maxhealth-damage
+        const percentageHP = actualHP/maxhealth
+        
+        console.log(actualHP)
+        console.log(percentageHP)
+    </script>
+
+    <script>
+let name = "john";
+let admin = name;
+
+console.log(admin);
+let ourPlanetName = "Earth"
+let currentVisitorName = ""
+
+    </script>
+
+<button>THIS ONE!</button>
+<p>Start machine</p>
+
+<script>
+    //an example for button changing and const in a function creation!
+const btn = document.querySelector("button");
+const txt = document.querySelector("p");
+
+btn.addEventListener("click", updateBtn);
+
+function updateBtn() {
+  if (btn.textContent === "Start machine") {
+    btn.textContent = "Stop machine";
+    txt.textContent = "The machine has started!";
+  } else {
+    btn.textContent = "Start machine";
+    txt.textContent = "The machine is stopped.";
+  }
+}    
+</script>
+
+    
+</body>
+</html>
