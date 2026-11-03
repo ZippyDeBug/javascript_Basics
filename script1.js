@@ -12,3 +12,30 @@ for (const button of buttons) {
   button.addEventListener("click", createParagraph);
 }
 
+
+
+
+//Camelise words excercise:
+/*
+function capitaliseWord(item, i, array) {
+  if (i > 0) {
+        array[i] = item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
+      }
+}
+
+  function camelize(word) {
+    let arr = word.split("-");
+    arr.forEach(capitaliseWord);
+    return arr.join("");
+  }
+*/
+
+  //OR (ignore that it is called camelise2!!)
+
+  function camelize2(word) {
+    let splits =  word.split("-")
+    for (i = 1; i >= splits.length; i++) {
+      splits[i] = splits[i].charAt(0).toUpperCase() + splits[i].slice(1).toLowerCase();
+      }
+    return splits.join("");
+  }
