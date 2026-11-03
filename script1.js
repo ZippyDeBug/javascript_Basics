@@ -15,8 +15,8 @@ for (const button of buttons) {
 
 
 
-//Camelise words excercise:
-/*
+//Camelise words exercise:
+
 function capitaliseWord(item, i, array) {
   if (i > 0) {
         array[i] = item.charAt(0).toUpperCase() + item.slice(1).toLowerCase();
@@ -28,7 +28,7 @@ function capitaliseWord(item, i, array) {
     arr.forEach(capitaliseWord);
     return arr.join("");
   }
-*/
+
 
   //OR (ignore that it is called camelise2!!)
 
@@ -39,3 +39,30 @@ function capitaliseWord(item, i, array) {
       }
     return splits.join("");
   }
+
+  // OR
+
+function camelize3(str) {
+  return str
+    .split('-') 
+    // splits 'my-long-word' into array ['my', 'long', 'word']
+    
+    .map(
+      (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+      // capitalizes first letters of all array items except the first one,converts ['my', 'long', 'word'] into ['my', 'Long', 'Word']
+    )
+    
+    .join('');
+    // joins ['my', 'Long', 'Word'] into 'myLongWord'
+  }
+
+
+
+
+  // Exercise Filter Range
+
+  let arr = [5, 3, 8, 1 ]
+
+???
+
+  let filtered = filterRanger(arr, 1, 4);
