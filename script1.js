@@ -56,6 +56,20 @@ function camelize3(str) {
     // joins ['my', 'Long', 'Word'] into 'myLongWord'
   }
 
+/*
+const camelize = str => {return str.split("-")
+.map((word,i) => {if (i >= 1) {return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()}
+else {return word}})
+.join("");}
+*/
+
+/*
+function camelize (str) {
+return str
+.split("-")
+.map((word, i) => i >= 1 ? word[0].toUpperCase() + word.slice(1) : word)
+.join("");
+} */
 
 
 
