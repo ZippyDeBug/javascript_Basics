@@ -134,30 +134,19 @@ let currentVisitorName = ""
 
     </script>
 
-<button>Start Machine</button>
-<p>Start machine</p>
+<button id="startButton">Start Machine</button>
+<p id="startText">Start machine</p>
 
 <script>
-    //an example for button changing and const in a function creation!
-const btn = document.querySelector("button");
-const txt = document.querySelector("p");
 
-btn.addEventListener("click", updateBtn);
-
-function updateBtn() {
-  if (btn.textContent === "Start machine") {
-    btn.textContent = "Stop machine";
-    txt.textContent = "The machine has started!";
-  } else {
-    btn.textContent = "Start machine";
-    txt.textContent = "The machine is stopped.";
-  }
-}    
 </script>
 
 <!-- button event examples -->
 <button id="btn2">Click Me Too</button>
 
+<button id="btn3">Click Me Three</button>
+
+<button onclick="alertFunction()">CLICK ME BABY</button>
 
     
 </body>

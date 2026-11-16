@@ -1,5 +1,6 @@
 //this is not in use, but was part of an exercise to illustrated external scripts being used in html. FYI is was a script module in the head content. ;-) <script type="module" src=""></script>
 
+
 //Button event example 1
 
 const btn2 = document.querySelector("#btn2");
@@ -12,7 +13,11 @@ btn3.addEventListener("click", () => {
   alert("Hello World");
 });
 
+//buttons alert functions - the HTML actually calls this via the onclick= method 
 
+function alertFunction() {
+  alert("YAY! YOU DID IT!");
+}
 
 // Other button example:
 //an example for button changing and const in a function creation!
@@ -41,6 +46,20 @@ function createParagraph() {
 }
 
 
+
+// ***Button Loops***
+// buttons is a node list. It looks and acts much like an array.
+const buttons = document.querySelectorAll("button");
+
+// we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+  // and for each one we add a 'click' listener
+  button.addEventListener("click", () => {
+    alert(button.id);
+  });
+});
+
+//end of ***button Loops ***
 
 //Camelise words exercise:
 
