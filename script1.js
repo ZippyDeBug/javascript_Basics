@@ -12,6 +12,12 @@ for (const button of buttons) {
   button.addEventListener("click", createParagraph);
 }
 
+//Button event examples
+
+const btn2 = document.querySelector("#btn2");
+btn2.onclick = () => alert("Hello World");
+
+
 
 
 
@@ -76,10 +82,7 @@ return str
   // Exercise Filter Range
 
   let arr = [5, 3, 8, 1 ]
-
-???
-
-  let filtered = filterRanger(arr, 1, 4);
+  let filtered = filterRange(arr, 1, 4);
 
 
   function filterRange(arr, a, b) {
@@ -87,10 +90,6 @@ return str
   return arr.filter(item => (a <= item && item <= b));
 }
 
-let arr = [5, 3, 8, 1];
+// alert( filtered ); // 3,1 (matching values)
 
-let filtered = filterRange(arr, 1, 4);
-
-alert( filtered ); // 3,1 (matching values)
-
-alert( arr ); // 5,3,8,1 (not modified)
+// alert( arr ); // 5,3,8,1 (not modified)
