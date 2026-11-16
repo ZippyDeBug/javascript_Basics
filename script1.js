@@ -1,23 +1,44 @@
 //this is not in use, but was part of an exercise to illustrated external scripts being used in html. FYI is was a script module in the head content. ;-) <script type="module" src=""></script>
 
-function createParagraph() {
-  const para = document.createElement("p");
-  para.textContent = "You clicked the button!";
-  document.body.appendChild(para);
-}
-
-const buttons = document.querySelectorAll("button");
-
-for (const button of buttons) {
-  button.addEventListener("click", createParagraph);
-}
-
-//Button event examples
+//Button event example 1
 
 const btn2 = document.querySelector("#btn2");
 btn2.onclick = () => alert("Hello World");
 
+//button event example 2
 
+const btn3 = document.querySelector("#btn3");
+btn3.addEventListener("click", () => {
+  alert("Hello World");
+});
+
+
+
+// Other button example:
+//an example for button changing and const in a function creation!
+const btnStart = document.querySelector("#startButton");
+const txtStart = document.querySelector("#startText");
+
+btnStart.addEventListener("click", () => {
+  updateBtn(); 
+  createParagraph();
+});
+
+function updateBtn() {
+  if (btnStart.textContent === "Start machine") {
+    btnStart.textContent = "Stop machine";
+    txtStart.textContent = "The machine has started!";
+  } else {
+    btnStart.textContent = "Start machine";
+    txtStart.textContent = "The machine is stopped.";
+  }
+}    
+
+function createParagraph() {
+  const para = document.createElement("p");
+  para.textContent = "You clicked a button!";
+  txtStart.appendChild(para);
+}
 
 
 
