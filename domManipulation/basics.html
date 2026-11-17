@@ -40,6 +40,12 @@
      //to clone the link chapter, we use the clone option
     const copyLinkPara = linkPara.cloneNode(true);
     sect.appendChild(copyLinkPara)
+
+
+    // remove content (the original paragraph in this case.. the copy still exists.)
+    sect.removeChild(linkPara)
+    // OR
+    copyLinkPara.remove()
      
 
     </script>
