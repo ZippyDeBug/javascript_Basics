@@ -34,9 +34,14 @@
     const linkPara = document.querySelector("p");
     linkPara.appendChild(text);
 
-
+    //move the link chapter to the bottom of section (not copying)
     sect.appendChild(linkPara);
-    
+
+     //to clone the link chapter, we use the clone option
+    const copyLinkPara = linkPara.cloneNode(true);
+    sect.appendChild(copyLinkPara)
+     
+
     </script>
   </body>
 </html>
